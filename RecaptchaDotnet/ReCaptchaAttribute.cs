@@ -38,6 +38,7 @@ namespace RecaptchaDotnet
             if (context.HttpContext.Request.Headers.All(x => !x.Key.Equals(Constants.ReCaptchaHeader, StringComparison.InvariantCultureIgnoreCase)))
             {
                 RejectRequest(context, mode);
+                return;
             }
 
             var reCaptchaResponse = context.HttpContext.Request.Headers.FirstOrDefault(x =>
@@ -46,6 +47,7 @@ namespace RecaptchaDotnet
             if (string.IsNullOrEmpty(reCaptchaResponse))
             {
                 RejectRequest(context, mode);
+                return;
             }
 
             var recaptchaVerificationResult = await _recaptchaService.VerifyAsync(reCaptchaResponse, CancellationToken.None);
@@ -58,7 +60,7 @@ namespace RecaptchaDotnet
                     case InvalidRecaptchaResponseMode.ThrowRecaptchaException:
                         throw new RecaptchaVerificationFailureException(msg);
                     case InvalidRecaptchaResponseMode.ReturnBadRequest:
-                        context.Result = new BadRequestObjectResult(msg);
+                        context.Result = new BadRequestObjectResult(new { error = msg });
                         break;
                 }
             }
@@ -76,7 +78,7 @@ namespace RecaptchaDotnet
                 case InvalidRecaptchaResponseMode.ThrowRecaptchaException:
                     throw new RecaptchaMissingException(msg);
                 case InvalidRecaptchaResponseMode.ReturnBadRequest:
-                    context.Result = new BadRequestObjectResult(msg);
+                    context.Result = new BadRequestObjectResult(new { error = msg });
                     break;
             }
         }

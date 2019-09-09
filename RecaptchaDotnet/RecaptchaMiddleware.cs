@@ -56,8 +56,8 @@ namespace RecaptchaDotnet
                         throw new RecaptchaVerificationFailureException(msg);
                     case InvalidRecaptchaResponseMode.ReturnBadRequest:
                         httpContext.Response.StatusCode = 400;
-                        await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new { msg }));
-                        break;
+                        await httpContext.Response.WriteAsync(JsonConvert.SerializeObject(new { error = msg }));
+                        return;
                 }
             }
 

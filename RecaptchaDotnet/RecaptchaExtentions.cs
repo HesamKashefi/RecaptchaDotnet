@@ -19,6 +19,8 @@ namespace RecaptchaDotnet
         {
             services.Configure(configure);
 
+            services.AddSingleton<ReCaptchaAttribute>();
+
             services.AddSingleton<IRecaptchaService, RecaptchaService>();
             
             services.AddHttpClient(Constants.RecaptchaHttpClient)

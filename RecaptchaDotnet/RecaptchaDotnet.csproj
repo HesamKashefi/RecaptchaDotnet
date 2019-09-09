@@ -11,6 +11,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>asp-net-core asp.net dotnet core recaptcha</PackageTags>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
