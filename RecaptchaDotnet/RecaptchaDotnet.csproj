@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/HesamKashefi/RecaptchaDotnet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HesamKashefi/RecaptchaDotnet.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>ASP.NET dotnet core recaptcha</PackageTags>
+    <PackageTags>asp-net-core asp.net dotnet core recaptcha</PackageTags>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
   </PropertyGroup>
 
