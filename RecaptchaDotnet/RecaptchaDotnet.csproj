@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Hesam Kashefi</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>UniversalPrism is a simple and easy to use recaptcha verification for asp.net core and .net apps.</Description>
+    <Description>RecaptchaDotnet is a simple and easy to use recaptcha verification for asp.net core and .net apps.</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/HesamKashefi/RecaptchaDotnet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HesamKashefi/RecaptchaDotnet.git</RepositoryUrl>
