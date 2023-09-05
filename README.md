@@ -2,6 +2,10 @@
 
 A simple, easy to use library for Google Recaptcha verification in .net apps specially `ASP.NET Core`.
 
+## Build Status
+
+[![build](https://github.com/HesamKashefi/RecaptchaDotnet/actions/workflows/build.yml/badge.svg)](https://github.com/HesamKashefi/RecaptchaDotnet/actions/workflows/build.yml)
+
 ## Installation
 
 With dotnet cli
